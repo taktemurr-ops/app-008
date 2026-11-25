@@ -1,27 +1,14 @@
-# APP-008 — Öğün 360 / Meal 360
+# Yemek Planlayıcı · Meal Planner
 
-A privacy-first, offline meal schedule and nutrition journal for Android and iOS built with Flutter. The application supports Turkish, English and Arabic including RTL layout and international digit entry.
+Haftalık menü ve birleşik alışveriş listesi · Weekly menu and one shopping list
 
-## Working product scope
+Eğitim ve Yaşam ailesinin uygulaması. Çevrimdışı çalışır; telefon, tablet ve web.
+Gerçek uygulama ortak motordadır: [egitim-motoru](https://github.com/taktemurr-ops/egitim-motoru); çatı ve
+reklam/satın alma/gizlilik: [studio-core](https://github.com/taktemurr-ops/studio-core) (`lib/apps`).
+Merkez uygulama: [merkez-egitim-ve-yasam](https://github.com/taktemurr-ops/merkez-egitim-ve-yasam).
 
-- Add, search, star and remove custom foods; record kcal, protein, carbs and fat per 100 grams.
-- Build meals in breakfast/lunch/dinner/snack slots with date and portion, and mark planned vs eaten.
-- Browse arbitrary dates and copy a previous day's plan with new record identifiers.
-- Observe daily targets and consumed macro progress; review the past seven days.
-- Aggregate outstanding meal ingredients into a daily shopping checklist.
-- Set nutrition targets and make a user-initiated local JSON export/import, with explicit destructive confirmations.
-- Keep private journals encrypted using OS-backed secure storage, with no login, cloud upload or network requests.
-- Unit, storage and widget tests plus GitHub CI analyzing and producing a debug Android APK.
+Veriler yalnızca cihazda saklanır; hesap gerekmez.
 
-## Local development
-
-```sh
-flutter create --platforms=android,ios --project-name ogun_360 .
-flutter pub get
-dart format lib test
-flutter analyze
-flutter test
-flutter build apk --debug
-```
-
-**Release gate:** The debug APK is for development testing, not a Play Store/App Store release. Before publication, perform real-device testing, vendor-backed Android/iOS signing, privacy and accessibility audits, legal/store review, real monetization credentials where applicable, and production builds. No in-app sales or advertising are enabled by this code. See docs/release-gates.md.
+> Bu depo önceden bağımsız bir uygulamaydı (`app-008`). Eğitim ve Yaşam çatısına taşındı; eski
+> sürümün kodu git geçmişinde duruyor. Özellikleri motora aktarıldı (haftalık plan, 4 öğün, "yendi" işareti, geçen haftayı kopyalama, birleşik alışveriş listesi; besin değeri takibi Sağlık ve Spor ailesinin kalori sayacındadır).
+> GitHub'da depo adı `uyg-yemek-planlayici` olarak değiştirilebilir (eski adresler yönlendirilir).
